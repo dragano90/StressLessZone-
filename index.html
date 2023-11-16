@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="main">
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                
+            </div>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">Mental Health</a>
+                <a href="#">The Benefits</a>
+                <a href="#">About</a>
+                <a href="#" >Contact></a>
+                
+            </nav>
+            
+        </header>
+        
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Perceived Stress Scale</h1>
+                    <div class="quiz-header">
+                    </div>
+                    <h2 class="question-text"></h2>
+
+                    <div class="option-list">
+                        
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 of 10 Questions</span>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+                
+
+                <div class="result-box">
+                    <h2>Quiz Result!</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                    </div>
+                    <span class="score-text">Your Score 0 out of 40</span>
+                    <div class="stress-level">
+                        <span>Your Stress Level: <span class="userscore"></span></span>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go to Home</button>
+                        <button class="solution-btn" onclick="showSolution()">Solutions</button>
+                    </div>
+                </div>
+                <div id="solutionhContent" class="solutionh-content">
+                   
+                    <h2>Your Stress Level Is High</h2>
+                    <div class="buttonsh-container">
+                        <button class="solution-button" onclick="breathingExercise()">Breathing Exercise</button> 
+                            <button class="solution-button" onclick="meditation()">Meditation</button>
+                             <button class="solution-button" onclick="healthyDiet()">Healthy Diet</button> 
+                            <button class="solution-button" onclick="relaxationMusic()">Music</button>
+                            <button class="solution-button" onclick="therapists()">Therapists</button>
+                          
+                            
+                      </div>
+                    
+                    <p>Stress is a normal part of life, but when it becomes chronic or overwhelming, it can take a toll on our physical and mental health. Fortunately, there are many effective ways to manage stress and improve our overall well-being.</p>
+                    <p>Here are some evidence-based solutions for high stress:</p>
+                   
+                    <ul>
+                        <li>
+                            
+                            <strong class="subtopic">Exercise regularly:</strong>
+                        <p>•Physical activity is a great way to relieve stress and anxiety. Even a short walk or jog can release endorphins, which have mood-boosting effects. Aim for at least 30 minutes of moderate-intensity exercise most days of the week.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Practice relaxation techniques:</strong>
+                        <p>•Relaxation techniques such as deep breathing, meditation, and progressive muscle relaxation can help to calm your mind and body. These techniques can be especially helpful when you're feeling overwhelmed or stressed.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Get enough sleep:</strong>
+                        <p>•When you're well-rested, you're better able to cope with stress. Aim for 7-8 hours of sleep each night.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Eat a healthy diet:</strong>
+                        <p>•Eating nutritious foods can help to improve your mood and energy levels. Avoid processed foods, sugary drinks, and excessive caffeine.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic"> Learn to say no:</strong>
+                        <p>•It's okay to set boundaries and say no to requests that you don't have time for or that will add to your stress level.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Take breakses:</strong>
+                        <p>•Step away from whatever is stressing you out and take a few minutes for yourself to relax and recharge.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Find healthy outlets for stress:</strong>
+                        <p>•If you're struggling to manage stress on your own, don't hesitate to seek professional help. A therapist can teach you additional coping skills and provide support.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic"> Seek professional help if needed:</strong>
+                        <p>• Find healthy ways to express your emotions, such as journaling, listening to music, or spending time in nature.</p>
+                    </li>
+            
+                </ul>
+                    <p>Remember, stress management is an ongoing process. It takes time and effort to find what works best for you. Be patient with yourself and don't give up.</p>
+                    <div id="breathingContent" class="breathing-content">
+                        <h2>3 Breathing Exercises for Stress Management</h2>
+                    
+                        <p>Deep breathing is beneficial to stay calm during a stressful situation.</p>
+                    
+                        <h3>Pursed Lips Breathing</h3>
+                        <ul>
+                            <li>• Inhale through the nose for 2 seconds.</li>
+                            <li>• Pucker your lips, then exhale for 4-6 seconds.</li>
+                            <li>• Repeat several times until you feel a slowed rate of breathing.</li>
+                        </ul>
+                    
+                        <h3>Square Breathing</h3>
+                        <button class="video-button" onclick="playSquareBreathingVideo()">Play Video</button>
+                        <video id="playSquareBreathingVideo" style="display:none;">
+                            Your browser does not support the video tag.
+                            <source src="video/box.mp4" type="video/mp4">
+                                            
+                          
+                        </video>
+                    
+                        <ul>
+                            <li>• Sit upright with your back straight.</li>
+                            <li>• Inhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                            <li>• Exhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                            <li>• Repeat.</li>
+                        </ul>
+                    
+                        <h3>4-7-8 Breathing</h3>
+                        <button class="video-button" onclick="play478BreathingVideo()">Play Video</button>
+                        <video id="play478BreathingVideo" style="display:none;">
+                            Your browser does not support the video tag.
+                            <source src="video/478.mp4" type="video/mp4">
+                            </video>
+        
+                        
+                        <ul>
+                            <li>• Sit upright.</li>
+                            <li>• Put your tongue on the roof of your mouth near your teeth.</li>
+                            <li>• Close your mouth, then inhale through the nose for 4 seconds.</li>
+                            <li>• Hold your breath for 7 seconds.</li>
+                            <li>• Exhale completely through pursed lips for 8 seconds.</li>
+                            <li>• Repeat.</li>
+                        </ul>
+                    </div>
+                    <div id="meditationContent" class="meditation-content">
+                        <h2>Meditation: A Simple, Fast Way to Reduce Stress</h2> 
+    
+                       <p>If stress has you anxious, tense, and worried, consider trying meditation. Spending even a few minutes in meditation can restore your calm and inner peace. Anyone can practice meditation. It's simple and inexpensive, and it doesn't require any special equipment. And you can practice meditation wherever you are — whether you're out for a walk, riding the bus, waiting at the doctor's office, or even in the middle of a difficult business meeting.</p> 
+                        <ul>
+                            <li>
+                        <strong class="subtopic">Understanding Meditation</strong> 
+                        
+                        <p>Meditation has been practiced for thousands of years, originally meant to help deepen understanding of the sacred and mystical forces of life. These days, meditation is commonly used for relaxation and stress reduction. Meditation is considered a type of mind-body complementary medicine.
+                        
+                        Meditation produces a deep state of relaxation and a tranquil mind. During meditation, you focus your attention and eliminate the stream of jumbled thoughts that may be crowding your mind and causing stress. This process results in enhanced physical and emotional well-being.</p>
+                    </li>
+                    <li>
+    
+                        <strong class="subtopic">Benefits of Meditation</strong>
+                        
+                        <p>Meditation can give you a sense of calm, peace, and balance that benefits both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and can even improve certain medical conditions.</p>
+                        </li>
+                        <li>
+    
+                            <strong class="subtopic">Meditation and Emotional Well-being</strong>
+                        
+                        <p>When you meditate, you clear away the information overload that builds up every day and contributes to your stress. The emotional benefits of meditation include:</p>
+                        
+                       <P>- Gaining a new perspective on stressful situations</P> 
+                       <P>- Building skills to manage your stress</P>
+                       <P>- Increasing self-awareness</P>
+                       <P>- Focusing on the present</P>
+                       <P>- Reducing negative emotions</P>
+    
+                       </li>
+                       <li>
+                        
+                        <strong class="subtopic">Meditation and Illness</strong>
+                        
+                        <P>Meditation might be useful if you have a medical condition, especially one that may be worsened by stress. While a growing body of scientific research supports the health benefits of meditation, some researchers believe it's not yet possible to draw conclusions about the possible benefits of meditation. With that in mind, some research suggests that meditation may help such conditions as:</P>
+                        
+                        <P>- Allergies</P>
+                        <P>- Anxiety disorders</P>
+                        <P>- Asthma</P>
+                        <P>- Binge eating</P>
+                        <P>- Cancer</P>
+                        <P>- Depression</P>
+                        <P>- Fatigue</P>
+                        <P>- Heart disease</P>
+                        <P>- High blood pressure</P>
+                        <P>- Pain</P>
+                        <P>- Sleep problems</P>
+                        <P>- Substance abuse</P>
+                        
+                        <P> Be sure to talk to your health care provider about the pros and cons of using meditation if you have any of these conditions or other health problems. In some cases, meditation can worsen symptoms associated with certain mental health conditions. Meditation isn't a replacement for traditional medical treatment. But it may be a useful addition to your other treatment.<P></P>
+                        
+                       </li>
+                       <li>
+    
+                        <strong class="subtopic">Types of Meditation</strong>
+                        
+                        <p>Meditation is an umbrella term for the many ways to a relaxed state of being. There are many types of meditation and relaxation techniques that have meditation components. All share the same goal of achieving inner peace. Ways to meditate can include:</p>
+                        
+                       <p>-Guided Meditation<p>
+                       <p>-Mantra Meditation<p>
+                       <p>-Mindfulness Meditation</p>
+                       <p>-Qi Gong<p>
+                       <p>-Tai Chi<p>
+                       <p>-Transcendental Meditation*<p>
+                       <p>-Yoga</p>
+                        
+                       </li>
+                       <li>
+                        
+                        <strong class="subtopic">Elements of Meditation</strong>
+                        
+                        <p>Different types of meditation may include different features to help you meditate. These may vary depending on whose guidance you follow or who's teaching a class. Some of the most common features in meditation include:</p>
+                        
+                        <p>- Focused attention</p>
+                        <p>- Relaxed breathing</p>
+                        <p>- A quiet setting</p>
+                        <p>- A comfortable position</p>
+    
+                        </li>
+                        <li>
+                        
+                        <strong class="subtopic">Everyday Ways to Practice Meditation</strong>
+                        
+                        <p>Don't let the thought of meditating the "right" way add to your stress. Sure, you can attend special meditation 
+                            centers or group classes led by trained instructors. But you also can practice meditation easily on your own. 
+                            And you can make meditation as formal or informal as you like — whatever suits your lifestyle and situation. 
+                            Some people build meditation into their daily routine. For example, they may start and end each day with an 
+                            hour of meditation. But all you really need is a few minutes of quality time for meditation. 
+                            Here are some ways you can practice meditation on your own, whenever you choose</p>
+                            </li>
+                            <li>
+                        
+                        <h3>Breathe Deeply:</h3>
+                        <uL>
+                         <li>This technique is good for beginners because breathing is a natural function. Focus all 
+                            attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your 
+                            nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your 
+                            breathing</li>
+                    </uL>
+    
+                        <h3>Scan Your Body: </h3>
+                        <ul>
+                       <li> When using this technique, focus attention on different parts of your body. Become aware 
+                        of your body's various sensations, whether that's pain, tension, warmth or relaxation. Combine body 
+                        scanning with breathing exercises and imagine breathing heat or relaxation into and out of different parts of 
+                        your body</li>
+                    </ul>
+    
+                         <h3>Repeat a Mantra: </h3>
+                         <ul>
+                        <li>You can create your own mantra, whether it's religious or secular. Examples of religious 
+                            mantras include the Jesus Prayer in the Christian tradition, the holy name of God in Judaism, or the om 
+                            mantra of Hinduism, Buddhism and other Eastern religions</li>
+                    </ul>
+    
+                         <h3>Walk and Meditate: <h3>
+                        <ul>
+                         <li>Combining a walk with meditation is an efficient and healthy way to relax. You can use 
+                            this technique anywhere you're walking — in a tranquil forest, on a city sidewalk or at the mall. When you 
+                            use this method, slow down the pace of walking so that you can focus on each movement of your legs or 
+                            feet. Don't focus on a particular destination. Concentrate on your legs and feet, repeating action words in 
+                            your mind such as lifting, moving and placing as you lift each foot, move your leg forward and place your 
+                            foot on the ground</li>
+                    </ul>
+    
+                        <h3>Engage in Prayer: <h3>
+                            <ul>
+                        <li>Prayer is the best known and most widely practiced example of meditation. Spoken and 
+                            written prayers are found in most faith traditions. You can pray using your own words or read prayers 
+                            written by others. Check the self-help or 12-step-recovery section of your local bookstore for examples. Talk 
+                            with your rabbi, priest, pastor or other spiritual leader about resources</li>
+                    </ul>
+    
+                        <h3>Read and Reflect: <h3>
+                            <ul>
+                        <li>Many people report that they benefit from reading poems or sacred texts, and taking a
+                            few moments to quietly reflect on their meaning. You also can listen to sacred music, spoken words or any 
+                            music you find relaxing or inspiring. You may want to write your reflections in a journal or discuss them with 
+                            a friend or spiritual leader</li>
+                    </ul>
+    
+                        <h3>Focus Your Love and Gratitude:<h3>
+                            <ul>
+                        <li>In this type of meditation, you focus your attention on a sacred object or 
+                            being, weaving feelings of love and gratitude into your thoughts. You can also close your eyes and use your 
+                            imagination or gaze at representations of the object.</li>
+                    </ul>
+    
+                        <strong class="subtopic">Building Your Meditation Skills</strong>
+                           <p>Don't judge your meditation skills, which may only increase your stress. Meditation takes practice. Keep in mind, 
+                            for instance, that it's common for your mind to wander during meditation, no matter how long you've been 
+                            practicing meditation. If you're meditating to calm your mind and your attention wanders, slowly return to the 
+                            object, sensation or movement you're focusing on. 
+                            Experiment, and you'll likely find out what types of meditation work best for you and what you enjoy doing. 
+                            Adapt meditation to your needs at the moment. Remember, there's no right way or wrong way to meditate. 
+                            What matters is that meditation helps you with stress reduction and feeling better overall.</p> 
+                        </li>
+                    <li>
+                    </div>
+                    <div id="healthyDietContent" class="healthyDiet-content">
+                        <h2>EATING FOR STRESS</h2>
+                    
+                        <p>Even in the best of times, you need food to survive and be healthy. Chronic stress (or stress overdrive) is certainly not the best of times, so the food choices you make become even more important to your health.</p>
+                    
+                        <p>Some diets, like ketogenic and paleo, are great in some instances but are not best for those experiencing chronic stress or stress overdrive. Here are some tips for eating for stress:</p>
+                    
+                        <ul>
+                            <li>
+                                <strong class="subtopic">GOLDEN RATIO</strong>
+                                <p>In each meal and snack include: protein (more vegetarian than animal); complex carbohydrates (whole grains), starchy vegetables (like carrots, sweet potatoes and legumes), and good quality fats (fresh olive, coconut, sesame, or flax oil)</p>
+                            </li>
+                            <li>
+                                <strong class="subtopic">EAT YOUR VEGETABLES</strong>
+                                <p>Every day, you should include 6-8 servings of a wide variety of vegetables in your meals, especially those that are naturally highly colored (bright green, red, orange, yellow, or purple). Vegetables provide essential vitamins, minerals, antioxidants, and a high amount of fiber.</p>
+                            </li>
+                            <li>
+                                <strong class="subtopic">AT REGULAR INTERVALS</strong>
+                                <p>Long periods without food and nourishment make your adrenals work harder, which means more cortisol released to help the body function. Having 3 nutritious meals, plus 2-3 snacks spread throughout the day, is a great way to help balance blood sugar and decrease the workload on your adrenals.</p>
+                            </li>
+                            <li>
+                                <strong class="subtopic">CAFFEINE</strong>
+                                <p>Like what you eat, what you choose to drink will either support or put a strain on your adrenals. People with chronic stress should avoid caffeinated drinks like coffee, tea, soda, and energy drinks. The caffeine may provide a temporary boost, but it will leave you feeling worse soon after.</p>
+                            </li>
+                            <li>
+                                <strong class="subtopic">DON'T FORGET THE PROTEIN</strong>
+                                <p>Good quality protein from meat, fish, fowl, eggs, dairy and especially various plant sources (soy and other legumes, nuts and seeds) is essential for stress. Try to avoid processed proteins, such as packaged lunch meats and processed cheeses.</p>
+                            </li>
+                            <li>
+                                <strong class="subtopic">SUGAR AND WHITE FLOUR</strong>
+                                <p>Ironically, foods made with these ingredients such as doughnuts, rolls, pies, cakes, cookies, crackers, and candy bars are the ones that many people suffering from chronic stress crave. Sugar and white flour are entirely naked calories, the metabolism of which drains an already depleted body of the vitamins and minerals it needs to heal or to maintain.</p>
+                                <p>Remember to close the <strong>ul</strong> tag after the last <strong>li</strong> tag.</p>
+                            </li>
+                        </ul>
+                    </div>
+    <div id="relaxationMusicContent" class="relaxationMusic-content">
+        <h2>Music For Stress Relief</h2>
+        
+        <p>Music can be a powerful tool for stress relief. Listening to calming and relaxing music can help to slow your heart rate, lower your blood pressure, and ease muscle tension.</p>
+        <p>Here are some types of music that are good for stress relief:</p>
+        <ul>
+        <li>
+            <strong class="subtopic">Classical music</strong>
+            <p>Classical music is often associated with relaxation and peacefulness. The slow tempo and calming melodies of classical music can help to soothe the mind and body.</p>
+        </li>
+        <li>
+            <strong class="subtopic">Nature sounds</strong>
+            <p>The sounds of nature, such as waves crashing on the shore or birds chirping in the trees, can have a calming and restorative effect on the mind and body.</p>
+        </li>
+        <li>
+            <strong class="subtopic">Ambient music</strong>
+            <p> Ambient music is designed to create a calming and relaxing atmosphere. It typically consists of slow, ethereal melodies and soundscapes.</p>
+        </li>
+        <li>
+            <strong class="subtopic">Slow, relaxing instrumental music</strong>
+            <p>Any type of instrumental music with a slow tempo and calming melody can be effective for stress relief. This includes genres such as jazz, folk, and new age.</p>
+            </li>
+            <li>
+                
+                <strong class="subtopic">White noise</strong> 
+                <p>White noise, such as the sound of a fan or a rainstorm, can help to block out distractions and create a more peaceful environment.</p>
+                </li>
+                <li>
+                    <strong class="subtopic">Binaural beats</strong> 
+                    <P>Binaural beats are created by playing two slightly different frequencies in each ear. They have been shown to have a calming and relaxing effect on the mind.</P>
+                    </li>
+                </ul>
+                     <p>It is important to find music that you personally find relaxing and enjoyable. Experiment with different genres and styles until you find something that works for you.</p>
+        
+                        <p>In addition to listening to music, you can also incorporate music into other stress-relieving activities, such as yoga, meditation, or taking a bath.</p>
+                    
+                                                                    
+                      </div>
+                
+                
+            </div>
+               <div id="solutionsContent" class="solutions-content">
+                
+                  <h2>You Are on Moderate Stress</h2>
+                     <p>Moderate stress can be managed through various strategies. Here are some solutions to help cope with moderate stress:</p>
+                     <ul>
+
+                     <li>
+                        <strong class="subtopic">Mindful Breathing:</strong>
+                        <p>•Engage in mindfulness meditation to bring awareness to the present moment.</p>
+                        <p>•Practice deep breathing exercises to promote relaxation.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Physical Activity:</strong>
+                        <p>• Incorporate regular exercise into your routine, such as walking, jogging, or yoga..</p>
+                        <p>• Exercise releases endorphins, which act as natural stress relievers.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Healthy Lifestyle</strong>
+                        <p>• Maintain a balanced diet with plenty of fruits, vegetables, and whole grains.</p>
+                        <p>• Avoid excessive caffeine and sugar, as they can contribute to stress.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Time Management:</strong>
+                        <p>• Prioritize tasks and break them into manageable steps.</p>
+                        <p>• Set realistic goals and deadlines to reduce feelings of overwhelm.</p>
+
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Social Support:</strong>
+                        <p>• Build a strong support system with friends and family.</p>
+                        <p>• Share your feelings and concerns with someone you trust.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Leisure Activities:</strong>
+                        <p>• Engage in activities you enjoy for a healthy outlet for stress.</p>
+                        <p>•Take breaks to do things you love, whether it's reading, listening to music, or spending time in nature.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Positive Thinking:</strong>
+                        <p>•Challenge negative thoughts and focus on positive aspects of situations.</p>
+                        <p>•Practice gratitude to shift your mindset towards appreciation.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Stress Reduction Techniques:</strong>
+                        <p>•Explore stress reduction techniques such as meditation or progressive muscle relaxation.</p>
+                        <p>•Identify and minimize sources of stress when possible.</p>
+
+                    </li>
+                    <li>
+                        <strong class="subtopic">Professional Support:</strong>
+                        <p>• Consider seeking support from a mental health professional if stress becomes overwhelming.</p>
+                        <p>• Therapy or counseling can provide coping strategies tailored to your specific needs.</p>
+
+                    </li>
+            
+              </ul>
+              <p>Remember, these are general suggestions, and it's important to find what works best for you. If stress persists or becomes unmanageable, seeking guidance from a healthcare professional is recommended. They can provide personalized advice based on your individual circumstances.</p>
+              <div class="image-container">
+                <img src="images/50.png" alt="Solutions Image" class="solutions-image">
+                <div class="buttons-container">
+                <button class="solution-button" onclick="breathingExercise()">Breathing Exercise</button> 
+                    <button class="solution-button" onclick="meditation()">Meditation</button>
+                     <button class="solution-button" onclick="healthyDiet()">Healthy Diet</button> 
+                    <button class="solution-button" onclick="relaxationMusic()">Music</button>
+              </div>
+              
+              <div id="breathingContent" class="breathing-content">
+                <h2>3 Breathing Exercises for Stress Management</h2>
+            
+                <p>Deep breathing is beneficial to stay calm during a stressful situation.</p>
+            
+                <h3>Pursed Lips Breathing</h3>
+                <ul>
+                    <li>• Inhale through the nose for 2 seconds.</li>
+                    <li>• Pucker your lips, then exhale for 4-6 seconds.</li>
+                    <li>• Repeat several times until you feel a slowed rate of breathing.</li>
+                </ul>
+            
+                <h3>Square Breathing</h3>
+                <button class="video-button" onclick="playSquareBreathingVideo()">Play Video</button>
+                <video id="playSquareBreathingVideo" style="display:none;">
+                    Your browser does not support the video tag.
+                    <source src="video/box.mp4" type="video/mp4">
+                                    
+                  
+                </video>
+            
+                <ul>
+                    <li>• Sit upright with your back straight.</li>
+                    <li>• Inhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                    <li>• Exhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                    <li>• Repeat.</li>
+                </ul>
+            
+                <h3>4-7-8 Breathing</h3>
+                <button class="video-button" onclick="play478BreathingVideo()">Play Video</button>
+                <video id="play478BreathingVideo" style="display:none;">
+                    Your browser does not support the video tag.
+                    <source src="video/478.mp4" type="video/mp4">
+                    </video>
+
+                
+                <ul>
+                    <li>• Sit upright.</li>
+                    <li>• Put your tongue on the roof of your mouth near your teeth.</li>
+                    <li>• Close your mouth, then inhale through the nose for 4 seconds.</li>
+                    <li>• Hold your breath for 7 seconds.</li>
+                    <li>• Exhale completely through pursed lips for 8 seconds.</li>
+                    <li>• Repeat.</li>
+                </ul>
+              </div>
+                <div id="meditationContent" class="meditation-content">
+                    <h2>Meditation: A Simple, Fast Way to Reduce Stress</h2> 
+
+                   <p>If stress has you anxious, tense, and worried, consider trying meditation. Spending even a few minutes in meditation can restore your calm and inner peace. Anyone can practice meditation. It's simple and inexpensive, and it doesn't require any special equipment. And you can practice meditation wherever you are — whether you're out for a walk, riding the bus, waiting at the doctor's office, or even in the middle of a difficult business meeting.</p> 
+                    <ul>
+                        <li>
+                    <strong class="subtopic">Understanding Meditation</strong> 
+                    
+                    <p>Meditation has been practiced for thousands of years, originally meant to help deepen understanding of the sacred and mystical forces of life. These days, meditation is commonly used for relaxation and stress reduction. Meditation is considered a type of mind-body complementary medicine.
+                    
+                    Meditation produces a deep state of relaxation and a tranquil mind. During meditation, you focus your attention and eliminate the stream of jumbled thoughts that may be crowding your mind and causing stress. This process results in enhanced physical and emotional well-being.</p>
+                </li>
+                <li>
+
+                    <strong class="subtopic">Benefits of Meditation</strong>
+                    
+                    <p>Meditation can give you a sense of calm, peace, and balance that benefits both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and can even improve certain medical conditions.</p>
+                    </li>
+                    <li>
+
+                        <strong class="subtopic">Meditation and Emotional Well-being</strong>
+                    
+                    <p>When you meditate, you clear away the information overload that builds up every day and contributes to your stress. The emotional benefits of meditation include:</p>
+                    
+                   <P>- Gaining a new perspective on stressful situations</P> 
+                   <P>- Building skills to manage your stress</P>
+                   <P>- Increasing self-awareness</P>
+                   <P>- Focusing on the present</P>
+                   <P>- Reducing negative emotions</P>
+
+                   </li>
+                   <li>
+                    
+                    <strong class="subtopic">Meditation and Illness</strong>
+                    
+                    <P>Meditation might be useful if you have a medical condition, especially one that may be worsened by stress. While a growing body of scientific research supports the health benefits of meditation, some researchers believe it's not yet possible to draw conclusions about the possible benefits of meditation. With that in mind, some research suggests that meditation may help such conditions as:</P>
+                    
+                    <P>- Allergies</P>
+                    <P>- Anxiety disorders</P>
+                    <P>- Asthma</P>
+                    <P>- Binge eating</P>
+                    <P>- Cancer</P>
+                    <P>- Depression</P>
+                    <P>- Fatigue</P>
+                    <P>- Heart disease</P>
+                    <P>- High blood pressure</P>
+                    <P>- Pain</P>
+                    <P>- Sleep problems</P>
+                    <P>- Substance abuse</P>
+                    
+                    <P> Be sure to talk to your health care provider about the pros and cons of using meditation if you have any of these conditions or other health problems. In some cases, meditation can worsen symptoms associated with certain mental health conditions. Meditation isn't a replacement for traditional medical treatment. But it may be a useful addition to your other treatment.<P></P>
+                    
+                   </li>
+                   <li>
+
+                    <strong class="subtopic">Types of Meditation</strong>
+                    
+                    <p>Meditation is an umbrella term for the many ways to a relaxed state of being. There are many types of meditation and relaxation techniques that have meditation components. All share the same goal of achieving inner peace. Ways to meditate can include:</p>
+                    
+                   <p>-Guided Meditation<p>
+                   <p>-Mantra Meditation<p>
+                   <p>-Mindfulness Meditation</p>
+                   <p>-Qi Gong<p>
+                   <p>-Tai Chi<p>
+                   <p>-Transcendental Meditation*<p>
+                   <p>-Yoga</p>
+                    
+                   </li>
+                   <li>
+                    
+                    <strong class="subtopic">Elements of Meditation</strong>
+                    
+                    <p>Different types of meditation may include different features to help you meditate. These may vary depending on whose guidance you follow or who's teaching a class. Some of the most common features in meditation include:</p>
+                    
+                    <p>- Focused attention</p>
+                    <p>- Relaxed breathing</p>
+                    <p>- A quiet setting</p>
+                    <p>- A comfortable position</p>
+
+                    </li>
+                    <li>
+                    
+                    <strong class="subtopic">Everyday Ways to Practice Meditation</strong>
+                    
+                    <p>Don't let the thought of meditating the "right" way add to your stress. Sure, you can attend special meditation 
+                        centers or group classes led by trained instructors. But you also can practice meditation easily on your own. 
+                        And you can make meditation as formal or informal as you like — whatever suits your lifestyle and situation. 
+                        Some people build meditation into their daily routine. For example, they may start and end each day with an 
+                        hour of meditation. But all you really need is a few minutes of quality time for meditation. 
+                        Here are some ways you can practice meditation on your own, whenever you choose</p>
+                        </li>
+                        <li>
+                    
+                    <h3>Breathe Deeply:</h3>
+                    <uL>
+                     <li>This technique is good for beginners because breathing is a natural function. Focus all 
+                        attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your 
+                        nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your 
+                        breathing</li>
+                </uL>
+
+                    <h3>Scan Your Body: </h3>
+                    <ul>
+                   <li> When using this technique, focus attention on different parts of your body. Become aware 
+                    of your body's various sensations, whether that's pain, tension, warmth or relaxation. Combine body 
+                    scanning with breathing exercises and imagine breathing heat or relaxation into and out of different parts of 
+                    your body</li>
+                </ul>
+
+                     <h3>Repeat a Mantra: </h3>
+                     <ul>
+                    <li>You can create your own mantra, whether it's religious or secular. Examples of religious 
+                        mantras include the Jesus Prayer in the Christian tradition, the holy name of God in Judaism, or the om 
+                        mantra of Hinduism, Buddhism and other Eastern religions</li>
+                </ul>
+
+                     <h3>Walk and Meditate: <h3>
+                    <ul>
+                     <li>Combining a walk with meditation is an efficient and healthy way to relax. You can use 
+                        this technique anywhere you're walking — in a tranquil forest, on a city sidewalk or at the mall. When you 
+                        use this method, slow down the pace of walking so that you can focus on each movement of your legs or 
+                        feet. Don't focus on a particular destination. Concentrate on your legs and feet, repeating action words in 
+                        your mind such as lifting, moving and placing as you lift each foot, move your leg forward and place your 
+                        foot on the ground</li>
+                </ul>
+
+                    <h3>Engage in Prayer: <h3>
+                        <ul>
+                    <li>Prayer is the best known and most widely practiced example of meditation. Spoken and 
+                        written prayers are found in most faith traditions. You can pray using your own words or read prayers 
+                        written by others. Check the self-help or 12-step-recovery section of your local bookstore for examples. Talk 
+                        with your rabbi, priest, pastor or other spiritual leader about resources</li>
+                </ul>
+
+                    <h3>Read and Reflect: <h3>
+                        <ul>
+                    <li>Many people report that they benefit from reading poems or sacred texts, and taking a
+                        few moments to quietly reflect on their meaning. You also can listen to sacred music, spoken words or any 
+                        music you find relaxing or inspiring. You may want to write your reflections in a journal or discuss them with 
+                        a friend or spiritual leader</li>
+                </ul>
+
+                    <h3>Focus Your Love and Gratitude:<h3>
+                        <ul>
+                    <li>In this type of meditation, you focus your attention on a sacred object or 
+                        being, weaving feelings of love and gratitude into your thoughts. You can also close your eyes and use your 
+                        imagination or gaze at representations of the object.</li>
+                </ul>
+
+                    <strong class="subtopic">Building Your Meditation Skills</strong>
+                       <p>Don't judge your meditation skills, which may only increase your stress. Meditation takes practice. Keep in mind, 
+                        for instance, that it's common for your mind to wander during meditation, no matter how long you've been 
+                        practicing meditation. If you're meditating to calm your mind and your attention wanders, slowly return to the 
+                        object, sensation or movement you're focusing on. 
+                        Experiment, and you'll likely find out what types of meditation work best for you and what you enjoy doing. 
+                        Adapt meditation to your needs at the moment. Remember, there's no right way or wrong way to meditate. 
+                        What matters is that meditation helps you with stress reduction and feeling better overall.</p> 
+                    </li>
+                </ul>
+                </div>
+                <div id="healthyDietContent" class="healthyDiet-content">
+
+                <h2>EATING FOR STRESS</h2>
+
+<p>Even in the best of times, you need food to survive and be healthy. Chronic stress (or stress overdrive) are certainly not the best of times, so the food choices you make become even more important to your health.</p>
+
+<p>Some diets, like ketogenic and paleo, are great in some instances but are not best for those experiencing chronic stress or stress overdrive. Here are some tips to eating for stress:</p>
+
+<ul>
+    <li>
+<strong class="subtopic">GOLDEN RATIO</strong> 
+
+<p>In each meal and snack include: protein (more vegetarian than animal); complex carbohydrates (whole grains), starchy vegetables (like carrots, sweet potatoes and legumes), and good quality fats (fresh olive, coconut, sesame, or flax oil)</p>
+
+</li>
+<li>
+
+    <strong class="subtopic">EAT YOUR VEGETABLES</strong> 
+
+<p>Every day, you should include 6-8 servings of a wide variety of vegetables in your meals, especially those that are naturally highly colored (bright green, red, orange, yellow or purple). Vegetables provide essential vitamins, minerals, antioxidants, and a high amount of fiber.</p>
+<li>
+</li>
+
+
+<strong class="subtopic" >AT REGULAR INTERVALS</strong>
+
+<p>Long periods without food and nourishment make your adrenals work harder, which means more cortisol released to help the body function. Having 3 nutritious meals, plus 2-3 snacks spread throughout the day, is a great way to help balance blood sugar and decrease the workload on your adrenals.</p>
+<li>
+</li>
+
+<strong class="subtopic">CAFFEINE</strong> 
+
+<p>Like what you eat, what you choose to drink will either support or put a strain on your adrenals. People with chronic stress should avoid caffeinated drinks like coffee, tea, soda, and energy drinks. The caffeine may provide a temporary boost, but it will leave you feeling worse soon after.</p>
+
+<li>
+</li>
+
+<strong class="subtopic">DON'T FORGET THE PROTEIN</strong>
+
+<p>Good quality protein from meat, fish, fowl, eggs, dairy and especially various plant sources (soy and other legumes, nuts and seeds) is essential for stress. Try to avoid processed proteins, such as packaged lunch meats and processed cheeses.</p>
+
+
+<li>
+</li>
+
+<strong class="subtopic">SUGAR AND WHITE FLOUR</strong> 
+
+<p>Ironically, foods made with these ingredients such as doughnuts, rolls, pies, cakes, cookies,crackers, and candy bars are the ones that many people suffering from chronic stress</p>
+
+<p>crave. Sugar and white flour are entirely naked calories, the metabolism of which drains an already depleted body of the vitamins and minerals it needs to heal or to maintain.</p>
+</li>
+            
+</ul>
+</div>
+<div id="relaxationMusicContent" class="relaxationMusic-content">
+<h2>Music For Stress Relief</h2>
+
+<p>Music can be a powerful tool for stress relief. Listening to calming and relaxing music can help to slow your heart rate, lower your blood pressure, and ease muscle tension.</p>
+<p>Here are some types of music that are good for stress relief:</p>
+<ul>
+<li>
+    <strong class="subtopic">Classical music</strong>
+    <p>Classical music is often associated with relaxation and peacefulness. The slow tempo and calming melodies of classical music can help to soothe the mind and body.</p>
+</li>
+<li>
+    <strong class="subtopic">Nature sounds</strong>
+    <p>The sounds of nature, such as waves crashing on the shore or birds chirping in the trees, can have a calming and restorative effect on the mind and body.</p>
+</li>
+<li>
+    <strong class="subtopic">Ambient music</strong>
+    <p> Ambient music is designed to create a calming and relaxing atmosphere. It typically consists of slow, ethereal melodies and soundscapes.</p>
+</li>
+<li>
+    <strong class="subtopic">Slow, relaxing instrumental music</strong>
+    <p>Any type of instrumental music with a slow tempo and calming melody can be effective for stress relief. This includes genres such as jazz, folk, and new age.</p>
+    </li>
+    <li>
+        
+        <strong class="subtopic">White noise</strong> 
+        <p>White noise, such as the sound of a fan or a rainstorm, can help to block out distractions and create a more peaceful environment.</p>
+        </li>
+        <li>
+            <strong class="subtopic">Binaural beats</strong> 
+            <P>Binaural beats are created by playing two slightly different frequencies in each ear. They have been shown to have a calming and relaxing effect on the mind.</P>
+            </li>
+        </ul>
+             <p>It is important to find music that you personally find relaxing and enjoyable. Experiment with different genres and styles until you find something that works for you.</p>
+
+                <p>In addition to listening to music, you can also incorporate music into other stress-relieving activities, such as yoga, meditation, or taking a bath.</p>
+            
+               
+  
+            </div>
+            </div>
+               </div>
+                <div id="solutionsContent" class="solutions-content">
+                
+                    <h2>Your Stress Level Is Moderate </h2>
+                       <p>Moderate stress can be managed through various strategies. Here are some solutions to help cope with moderate stress:</p>
+                       <ul>
+  
+                       <li>
+                          <strong class="subtopic">Mindful Breathing:</strong>
+                          <p>•Engage in mindfulness meditation to bring awareness to the present moment.</p>
+                          <p>•Practice deep breathing exercises to promote relaxation.</p>
+                      </li>
+                      <li>
+                          <strong class="subtopic">Physical Activity:</strong>
+                          <p>• Incorporate regular exercise into your routine, such as walking, jogging, or yoga..</p>
+                          <p>• Exercise releases endorphins, which act as natural stress relievers.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Healthy Lifestyle</strong>
+                          <p>• Maintain a balanced diet with plenty of fruits, vegetables, and whole grains.</p>
+                          <p>• Avoid excessive caffeine and sugar, as they can contribute to stress.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Time Management:</strong>
+                          <p>• Prioritize tasks and break them into manageable steps.</p>
+                          <p>• Set realistic goals and deadlines to reduce feelings of overwhelm.</p>
+  
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Social Support:</strong>
+                          <p>• Build a strong support system with friends and family.</p>
+                          <p>• Share your feelings and concerns with someone you trust.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Leisure Activities:</strong>
+                          <p>• Engage in activities you enjoy for a healthy outlet for stress.</p>
+                          <p>•Take breaks to do things you love, whether it's reading, listening to music, or spending time in nature.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Positive Thinking:</strong>
+                          <p>•Challenge negative thoughts and focus on positive aspects of situations.</p>
+                          <p>•Practice gratitude to shift your mindset towards appreciation.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Stress Reduction Techniques:</strong>
+                          <p>•Explore stress reduction techniques such as meditation or progressive muscle relaxation.</p>
+                          <p>•Identify and minimize sources of stress when possible.</p>
+  
+                      </li>
+                      <li>
+                          <strong class="subtopic">Professional Support:</strong>
+                          <p>• Consider seeking support from a mental health professional if stress becomes overwhelming.</p>
+                          <p>• Therapy or counseling can provide coping strategies tailored to your specific needs.</p>
+  
+                      </li>
+              
+                </ul>
+                <p>Remember, these are general suggestions, and it's important to find what works best for you. If stress persists or becomes unmanageable, seeking guidance from a healthcare professional is recommended. They can provide personalized advice based on your individual circumstances.</p>
+                <div class="image-container">
+                  <img src="images/50.png" alt="Solutions Image" class="solutions-image">
+                  <div class="buttons-container">
+                  <button class="solution-button" onclick="breathingExercise()">Breathing Exercise</button> 
+                      <button class="solution-button" onclick="meditation()">Meditation</button>
+                       <button class="solution-button" onclick="healthyDiet()">Healthy Diet</button> 
+                      <button class="solution-button" onclick="relaxationMusic()">Music</button>
+                </div>
+                
+                <div id="breathingContent" class="breathing-content">
+                  <h2>3 Breathing Exercises for Stress Management</h2>
+              
+                  <p>Deep breathing is beneficial to stay calm during a stressful situation.</p>
+              
+                  <h3>Pursed Lips Breathing</h3>
+                  <ul>
+                      <li>• Inhale through the nose for 2 seconds.</li>
+                      <li>• Pucker your lips, then exhale for 4-6 seconds.</li>
+                      <li>• Repeat several times until you feel a slowed rate of breathing.</li>
+                  </ul>
+              
+                  <h3>Square Breathing</h3>
+                  <button class="video-button" onclick="playSquareBreathingVideo()">Play Video</button>
+                  <video id="playSquareBreathingVideo" style="display:none;">
+                      Your browser does not support the video tag.
+                      <source src="video/box.mp4" type="video/mp4">
+                                      
+                    
+                  </video>
+              
+                  <ul>
+                      <li>• Sit upright with your back straight.</li>
+                      <li>• Inhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                      <li>• Exhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                      <li>• Repeat.</li>
+                  </ul>
+              
+                  <h3>4-7-8 Breathing</h3>
+                  <button class="video-button" onclick="play478BreathingVideo()">Play Video</button>
+                  <video id="play478BreathingVideo" style="display:none;">
+                      Your browser does not support the video tag.
+                      <source src="video/478.mp4" type="video/mp4">
+                      </video>
+  
+                  
+                  <ul>
+                      <li>• Sit upright.</li>
+                      <li>• Put your tongue on the roof of your mouth near your teeth.</li>
+                      <li>• Close your mouth, then inhale through the nose for 4 seconds.</li>
+                      <li>• Hold your breath for 7 seconds.</li>
+                      <li>• Exhale completely through pursed lips for 8 seconds.</li>
+                      <li>• Repeat.</li>
+                  </ul>
+                </div>
+                  <div id="meditationContent" class="meditation-content">
+                      <h2>Meditation: A Simple, Fast Way to Reduce Stress</h2> 
+  
+                     <p>If stress has you anxious, tense, and worried, consider trying meditation. Spending even a few minutes in meditation can restore your calm and inner peace. Anyone can practice meditation. It's simple and inexpensive, and it doesn't require any special equipment. And you can practice meditation wherever you are — whether you're out for a walk, riding the bus, waiting at the doctor's office, or even in the middle of a difficult business meeting.</p> 
+                      <ul>
+                          <li>
+                      <strong class="subtopic">Understanding Meditation</strong> 
+                      
+                      <p>Meditation has been practiced for thousands of years, originally meant to help deepen understanding of the sacred and mystical forces of life. These days, meditation is commonly used for relaxation and stress reduction. Meditation is considered a type of mind-body complementary medicine.
+                      
+                      Meditation produces a deep state of relaxation and a tranquil mind. During meditation, you focus your attention and eliminate the stream of jumbled thoughts that may be crowding your mind and causing stress. This process results in enhanced physical and emotional well-being.</p>
+                  </li>
+                  <li>
+  
+                      <strong class="subtopic">Benefits of Meditation</strong>
+                      
+                      <p>Meditation can give you a sense of calm, peace, and balance that benefits both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and can even improve certain medical conditions.</p>
+                      </li>
+                      <li>
+  
+                          <strong class="subtopic">Meditation and Emotional Well-being</strong>
+                      
+                      <p>When you meditate, you clear away the information overload that builds up every day and contributes to your stress. The emotional benefits of meditation include:</p>
+                      
+                     <P>- Gaining a new perspective on stressful situations</P> 
+                     <P>- Building skills to manage your stress</P>
+                     <P>- Increasing self-awareness</P>
+                     <P>- Focusing on the present</P>
+                     <P>- Reducing negative emotions</P>
+  
+                     </li>
+                     <li>
+                      
+                      <strong class="subtopic">Meditation and Illness</strong>
+                      
+                      <P>Meditation might be useful if you have a medical condition, especially one that may be worsened by stress. While a growing body of scientific research supports the health benefits of meditation, some researchers believe it's not yet possible to draw conclusions about the possible benefits of meditation. With that in mind, some research suggests that meditation may help such conditions as:</P>
+                      
+                      <P>- Allergies</P>
+                      <P>- Anxiety disorders</P>
+                      <P>- Asthma</P>
+                      <P>- Binge eating</P>
+                      <P>- Cancer</P>
+                      <P>- Depression</P>
+                      <P>- Fatigue</P>
+                      <P>- Heart disease</P>
+                      <P>- High blood pressure</P>
+                      <P>- Pain</P>
+                      <P>- Sleep problems</P>
+                      <P>- Substance abuse</P>
+                      
+                      <P> Be sure to talk to your health care provider about the pros and cons of using meditation if you have any of these conditions or other health problems. In some cases, meditation can worsen symptoms associated with certain mental health conditions. Meditation isn't a replacement for traditional medical treatment. But it may be a useful addition to your other treatment.<P></P>
+                      
+                     </li>
+                     <li>
+  
+                      <strong class="subtopic">Types of Meditation</strong>
+                      
+                      <p>Meditation is an umbrella term for the many ways to a relaxed state of being. There are many types of meditation and relaxation techniques that have meditation components. All share the same goal of achieving inner peace. Ways to meditate can include:</p>
+                      
+                     <p>-Guided Meditation<p>
+                     <p>-Mantra Meditation<p>
+                     <p>-Mindfulness Meditation</p>
+                     <p>-Qi Gong<p>
+                     <p>-Tai Chi<p>
+                     <p>-Transcendental Meditation*<p>
+                     <p>-Yoga</p>
+                      
+                     </li>
+                     <li>
+                      
+                      <strong class="subtopic">Elements of Meditation</strong>
+                      
+                      <p>Different types of meditation may include different features to help you meditate. These may vary depending on whose guidance you follow or who's teaching a class. Some of the most common features in meditation include:</p>
+                      
+                      <p>- Focused attention</p>
+                      <p>- Relaxed breathing</p>
+                      <p>- A quiet setting</p>
+                      <p>- A comfortable position</p>
+  
+                      </li>
+                      <li>
+                      
+                      <strong class="subtopic">Everyday Ways to Practice Meditation</strong>
+                      
+                      <p>Don't let the thought of meditating the "right" way add to your stress. Sure, you can attend special meditation 
+                          centers or group classes led by trained instructors. But you also can practice meditation easily on your own. 
+                          And you can make meditation as formal or informal as you like — whatever suits your lifestyle and situation. 
+                          Some people build meditation into their daily routine. For example, they may start and end each day with an 
+                          hour of meditation. But all you really need is a few minutes of quality time for meditation. 
+                          Here are some ways you can practice meditation on your own, whenever you choose</p>
+                          </li>
+                          <li>
+                      
+                      <h3>Breathe Deeply:</h3>
+                      <uL>
+                       <li>This technique is good for beginners because breathing is a natural function. Focus all 
+                          attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your 
+                          nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your 
+                          breathing</li>
+                  </uL>
+  
+                      <h3>Scan Your Body: </h3>
+                      <ul>
+                     <li> When using this technique, focus attention on different parts of your body. Become aware 
+                      of your body's various sensations, whether that's pain, tension, warmth or relaxation. Combine body 
+                      scanning with breathing exercises and imagine breathing heat or relaxation into and out of different parts of 
+                      your body</li>
+                  </ul>
+  
+                       <h3>Repeat a Mantra: </h3>
+                       <ul>
+                      <li>You can create your own mantra, whether it's religious or secular. Examples of religious 
+                          mantras include the Jesus Prayer in the Christian tradition, the holy name of God in Judaism, or the om 
+                          mantra of Hinduism, Buddhism and other Eastern religions</li>
+                  </ul>
+  
+                       <h3>Walk and Meditate: <h3>
+                      <ul>
+                       <li>Combining a walk with meditation is an efficient and healthy way to relax. You can use 
+                          this technique anywhere you're walking — in a tranquil forest, on a city sidewalk or at the mall. When you 
+                          use this method, slow down the pace of walking so that you can focus on each movement of your legs or 
+                          feet. Don't focus on a particular destination. Concentrate on your legs and feet, repeating action words in 
+                          your mind such as lifting, moving and placing as you lift each foot, move your leg forward and place your 
+                          foot on the ground</li>
+                  </ul>
+  
+                      <h3>Engage in Prayer: <h3>
+                          <ul>
+                      <li>Prayer is the best known and most widely practiced example of meditation. Spoken and 
+                          written prayers are found in most faith traditions. You can pray using your own words or read prayers 
+                          written by others. Check the self-help or 12-step-recovery section of your local bookstore for examples. Talk 
+                          with your rabbi, priest, pastor or other spiritual leader about resources</li>
+                  </ul>
+  
+                      <h3>Read and Reflect: <h3>
+                          <ul>
+                      <li>Many people report that they benefit from reading poems or sacred texts, and taking a
+                          few moments to quietly reflect on their meaning. You also can listen to sacred music, spoken words or any 
+                          music you find relaxing or inspiring. You may want to write your reflections in a journal or discuss them with 
+                          a friend or spiritual leader</li>
+                  </ul>
+  
+                      <h3>Focus Your Love and Gratitude:<h3>
+                          <ul>
+                      <li>In this type of meditation, you focus your attention on a sacred object or 
+                          being, weaving feelings of love and gratitude into your thoughts. You can also close your eyes and use your 
+                          imagination or gaze at representations of the object.</li>
+                  </ul>
+  
+                      <strong class="subtopic">Building Your Meditation Skills</strong>
+                         <p>Don't judge your meditation skills, which may only increase your stress. Meditation takes practice. Keep in mind, 
+                          for instance, that it's common for your mind to wander during meditation, no matter how long you've been 
+                          practicing meditation. If you're meditating to calm your mind and your attention wanders, slowly return to the 
+                          object, sensation or movement you're focusing on. 
+                          Experiment, and you'll likely find out what types of meditation work best for you and what you enjoy doing. 
+                          Adapt meditation to your needs at the moment. Remember, there's no right way or wrong way to meditate. 
+                          What matters is that meditation helps you with stress reduction and feeling better overall.</p> 
+                      </li>
+                  </ul>
+                  </div>
+                  <div id="healthyDietContent" class="healthyDiet-content">
+  
+                  <h2>EATING FOR STRESS</h2>
+  
+  <p>Even in the best of times, you need food to survive and be healthy. Chronic stress (or stress overdrive) are certainly not the best of times, so the food choices you make become even more important to your health.</p>
+  
+  <p>Some diets, like ketogenic and paleo, are great in some instances but are not best for those experiencing chronic stress or stress overdrive. Here are some tips to eating for stress:</p>
+  
+  <ul>
+      <li>
+  <strong class="subtopic">GOLDEN RATIO</strong> 
+  
+  <p>In each meal and snack include: protein (more vegetarian than animal); complex carbohydrates (whole grains), starchy vegetables (like carrots, sweet potatoes and legumes), and good quality fats (fresh olive, coconut, sesame, or flax oil)</p>
+  
+  </li>
+  <li>
+  
+      <strong class="subtopic">EAT YOUR VEGETABLES</strong> 
+  
+  <p>Every day, you should include 6-8 servings of a wide variety of vegetables in your meals, especially those that are naturally highly colored (bright green, red, orange, yellow or purple). Vegetables provide essential vitamins, minerals, antioxidants, and a high amount of fiber.</p>
+  <li>
+  </li>
+  
+  
+  <strong class="subtopic" >AT REGULAR INTERVALS</strong>
+  
+  <p>Long periods without food and nourishment make your adrenals work harder, which means more cortisol released to help the body function. Having 3 nutritious meals, plus 2-3 snacks spread throughout the day, is a great way to help balance blood sugar and decrease the workload on your adrenals.</p>
+  <li>
+  </li>
+  
+  <strong class="subtopic">CAFFEINE</strong> 
+  
+  <p>Like what you eat, what you choose to drink will either support or put a strain on your adrenals. People with chronic stress should avoid caffeinated drinks like coffee, tea, soda, and energy drinks. The caffeine may provide a temporary boost, but it will leave you feeling worse soon after.</p>
+  
+  <li>
+  </li>
+  
+  <strong class="subtopic">DON'T FORGET THE PROTEIN</strong>
+  
+  <p>Good quality protein from meat, fish, fowl, eggs, dairy and especially various plant sources (soy and other legumes, nuts and seeds) is essential for stress. Try to avoid processed proteins, such as packaged lunch meats and processed cheeses.</p>
+  
+  
+  <li>
+  </li>
+  
+  <strong class="subtopic">SUGAR AND WHITE FLOUR</strong> 
+  
+  <p>Ironically, foods made with these ingredients such as doughnuts, rolls, pies, cakes, cookies,crackers, and candy bars are the ones that many people suffering from chronic stress</p>
+  
+  <p>crave. Sugar and white flour are entirely naked calories, the metabolism of which drains an already depleted body of the vitamins and minerals it needs to heal or to maintain.</p>
+  </li>
+              
+  </ul>
+  </div>
+  <div id="relaxationMusicContent" class="relaxationMusic-content">
+  <h2>Music For Stress Relief</h2>
+  
+  <p>Music can be a powerful tool for stress relief. Listening to calming and relaxing music can help to slow your heart rate, lower your blood pressure, and ease muscle tension.</p>
+  <p>Here are some types of music that are good for stress relief:</p>
+  <ul>
+  <li>
+      <strong class="subtopic">Classical music</strong>
+      <p>Classical music is often associated with relaxation and peacefulness. The slow tempo and calming melodies of classical music can help to soothe the mind and body.</p>
+  </li>
+  <li>
+      <strong class="subtopic">Nature sounds</strong>
+      <p>The sounds of nature, such as waves crashing on the shore or birds chirping in the trees, can have a calming and restorative effect on the mind and body.</p>
+  </li>
+  <li>
+      <strong class="subtopic">Ambient music</strong>
+      <p> Ambient music is designed to create a calming and relaxing atmosphere. It typically consists of slow, ethereal melodies and soundscapes.</p>
+  </li>
+  <li>
+      <strong class="subtopic">Slow, relaxing instrumental music</strong>
+      <p>Any type of instrumental music with a slow tempo and calming melody can be effective for stress relief. This includes genres such as jazz, folk, and new age.</p>
+      </li>
+      <li>
+          
+          <strong class="subtopic">White noise</strong> 
+          <p>White noise, such as the sound of a fan or a rainstorm, can help to block out distractions and create a more peaceful environment.</p>
+          </li>
+          <li>
+              <strong class="subtopic">Binaural beats</strong> 
+              <P>Binaural beats are created by playing two slightly different frequencies in each ear. They have been shown to have a calming and relaxing effect on the mind.</P>
+              </li>
+          </ul>
+               <p>It is important to find music that you personally find relaxing and enjoyable. Experiment with different genres and styles until you find something that works for you.</p>
+  
+                  <p>In addition to listening to music, you can also incorporate music into other stress-relieving activities, such as yoga, meditation, or taking a bath.</p>
+              
+                 
+    
+              </div>
+              </div>
+                 </div>
+               
+                <!-- Move this section outside of .result-box -->
+                <div id="solutionContent" class="solution-content">
+                   
+                    <!-- Content for Low Stress -->
+                    <h2>Your Stress Level Is Low</h2>
+                    <p>Here are some tips for maintaining low stress and promoting overall well-being.</p>
+                   
+                    <ul>
+                    <li>
+                        <strong class="subtopic">Mindful Breathing:</strong>
+                        <p>•Engage in deep breathing exercises to calm your nervous system..</p>
+                        <p>•Practice mindful breathing, focusing on each breath to stay present.</p>
+                    </li>
+                    <li>
+                        <strong class="subtopic">Regular Exercise:</strong>
+                        <p>•Incorporate regular physical activity into your routine, such as walking, jogging, or yoga.</p>
+                        <p>•Exercise helps release endorphins, which are natural stress relievers.</p>
+                    </li>
+                    <li>
+                    <strong class="subtopic">Healthy Diet:</strong>
+                    <p>•Eat a balanced diet with plenty of fruits, vegetables, and whole grains.</p>
+                    <p>•Avoid excessive caffeine and sugar, as they can contribute to stress.</p>
+                </li>
+                <li>
+                    <strong class="subtopic" >Adequate Sleep:</strong>
+                    <p>•Ensure you get enough quality sleep each night (7-9 hours for adults).</p>
+                    <p>•Create a relaxing bedtime routine to improve sleep quality.</p>
+                </li>
+                    <li>
+                    <strong class="subtopic" >Time Management:</strong>
+                    <p>•Prioritize tasks and break them into manageable steps.</p>
+                    <p>•Set realistic goals and deadlines to reduce feelings of overwhelm</p>
+
+                    </li>
+                    <li>
+                     <strong class="subtopic" >Social Support:</strong>
+                     <p>•Build a strong support system of friends and family.</p>
+                     <p>•Share your feelings and concerns with someone you trust.</p>
+                    </li>
+
+                <li>
+                    <strong class="subtopic">Hobbies and Leisure Activities:</strong>
+                    <p>•Engage in activities you enjoy to provide a healthy outlet for stress.</p>
+                    <p>•Take breaks to do things you love, whether it's reading, listening to music, or spending time in nature.</p>
+
+                </li>
+                <li>
+                    <strong class="subtopic">Positive Thinking:</strong>
+                    <p>•Challenge negative thoughts and focus on positive aspects of situations.</p>
+                    <p>•Practice gratitude to shift your mindset towards appreciation.</p>
+
+                </li>
+                <li>
+                    <strong class="subtopic">Limiting Stressors:</strong>
+                    <p>•Identify and minimize sources of stress when possible.</p>
+                    <p>•Set boundaries and learn to say no to additional responsibilities.</p>
+
+                </li>
+                <li>
+                    <strong class="subtopic">Professional Help:</strong>
+                    <p>•Consider seeking support from a mental health professional if stress becomes overwhelming.</p>
+                    <p>•Therapy or counseling can provide coping strategies tailored to your specific needs.</p>
+
+                </li>
+            
+             </ul>
+                    <p>Remember, these are general suggestions, and it's essential to find what works best for you. If stress persists or becomes unmanageable, seeking guidance from a healthcare professional is recommended. They can provide personalized advice based on your individual circumstances</p>
+                      
+                    <div class="image-container">
+                    <img src="images/50.png" alt="Solution Image" class="solution-image">
+                    <div class="button-container">
+                    <button class="solution-button" onclick="breathingExercise()">Breathing Exercise</button> 
+                    <button class="solution-button" onclick="meditation()">Meditation</button>
+                     <button class="solution-button" onclick="healthyDiet()">Healthy Diet</button> 
+                    <button class="solution-button" onclick="goBack()">Back</button>
+                </div>
+                
+                <div id="breathingContent" class="breathing-content">
+                    <h2>3 Breathing Exercises for Stress Management</h2>
+                
+                    <p>Deep breathing is beneficial to stay calm during a stressful situation.</p>
+                
+                    <h3>Pursed Lips Breathing</h3>
+                    <ul>
+                        <li>• Inhale through the nose for 2 seconds.</li>
+                        <li>• Pucker your lips, then exhale for 4-6 seconds.</li>
+                        <li>• Repeat several times until you feel a slowed rate of breathing.</li>
+                    </ul>
+                
+                    <h3>Square Breathing</h3>
+                    <button class="video-button" onclick="playSquareBreathingVideo()">Play Video</button>
+                    <video id="playSquareBreathingVideo" style="display:none;">
+                        Your browser does not support the video tag.
+                        <source src="video/box.mp4" type="video/mp4">
+                                        
+                      
+                    </video>
+                
+                    <ul>
+                        <li>• Sit upright with your back straight.</li>
+                        <li>• Inhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                        <li>• Exhale for 4 seconds, then hold your breath for 4 seconds.</li>
+                        <li>• Repeat.</li>
+                    </ul>
+                
+                    <h3>4-7-8 Breathing</h3>
+                    <button class="video-button" onclick="play478BreathingVideo()">Play Video</button>
+                    <video id="play478BreathingVideo" style="display:none;">
+                        Your browser does not support the video tag.
+                        <source src="video/478.mp4" type="video/mp4">
+                        </video>
+
+                    
+                    <ul>
+                        <li>• Sit upright.</li>
+                        <li>• Put your tongue on the roof of your mouth near your teeth.</li>
+                        <li>• Close your mouth, then inhale through the nose for 4 seconds.</li>
+                        <li>• Hold your breath for 7 seconds.</li>
+                        <li>• Exhale completely through pursed lips for 8 seconds.</li>
+                        <li>• Repeat.</li>
+                    </ul>
+                </div>
+                <div id="meditationContent" class="meditation-content">
+                    <h2>Meditation: A Simple, Fast Way to Reduce Stress</h2> 
+
+                   <p>If stress has you anxious, tense, and worried, consider trying meditation. Spending even a few minutes in meditation can restore your calm and inner peace. Anyone can practice meditation. It's simple and inexpensive, and it doesn't require any special equipment. And you can practice meditation wherever you are — whether you're out for a walk, riding the bus, waiting at the doctor's office, or even in the middle of a difficult business meeting.</p> 
+                    <ul>
+                        <li>
+                    <strong class="subtopic">Understanding Meditation</strong> 
+                    
+                    <p>Meditation has been practiced for thousands of years, originally meant to help deepen understanding of the sacred and mystical forces of life. These days, meditation is commonly used for relaxation and stress reduction. Meditation is considered a type of mind-body complementary medicine.
+                    
+                    Meditation produces a deep state of relaxation and a tranquil mind. During meditation, you focus your attention and eliminate the stream of jumbled thoughts that may be crowding your mind and causing stress. This process results in enhanced physical and emotional well-being.</p>
+                </li>
+                <li>
+
+                    <strong class="subtopic">Benefits of Meditation</strong>
+                    
+                    <p>Meditation can give you a sense of calm, peace, and balance that benefits both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and can even improve certain medical conditions.</p>
+                    </li>
+                    <li>
+
+                        <strong class="subtopic">Meditation and Emotional Well-being</strong>
+                    
+                    <p>When you meditate, you clear away the information overload that builds up every day and contributes to your stress. The emotional benefits of meditation include:</p>
+                    
+                   <P>- Gaining a new perspective on stressful situations</P> 
+                   <P>- Building skills to manage your stress</P>
+                   <P>- Increasing self-awareness</P>
+                   <P>- Focusing on the present</P>
+                   <P>- Reducing negative emotions</P>
+
+                   </li>
+                   <li>
+                    
+                    <strong class="subtopic">Meditation and Illness</strong>
+                    
+                    <P>Meditation might be useful if you have a medical condition, especially one that may be worsened by stress. While a growing body of scientific research supports the health benefits of meditation, some researchers believe it's not yet possible to draw conclusions about the possible benefits of meditation. With that in mind, some research suggests that meditation may help such conditions as:</P>
+                    
+                    <P>- Allergies</P>
+                    <P>- Anxiety disorders</P>
+                    <P>- Asthma</P>
+                    <P>- Binge eating</P>
+                    <P>- Cancer</P>
+                    <P>- Depression</P>
+                    <P>- Fatigue</P>
+                    <P>- Heart disease</P>
+                    <P>- High blood pressure</P>
+                    <P>- Pain</P>
+                    <P>- Sleep problems</P>
+                    <P>- Substance abuse</P>
+                    
+                    <P> Be sure to talk to your health care provider about the pros and cons of using meditation if you have any of these conditions or other health problems. In some cases, meditation can worsen symptoms associated with certain mental health conditions. Meditation isn't a replacement for traditional medical treatment. But it may be a useful addition to your other treatment.<P></P>
+                    
+                   </li>
+                   <li>
+
+                    <strong class="subtopic">Types of Meditation</strong>
+                    
+                    <p>Meditation is an umbrella term for the many ways to a relaxed state of being. There are many types of meditation and relaxation techniques that have meditation components. All share the same goal of achieving inner peace. Ways to meditate can include:</p>
+                    
+                   <p>-Guided Meditation<p>
+                   <p>-Mantra Meditation<p>
+                   <p>-Mindfulness Meditation</p>
+                   <p>-Qi Gong<p>
+                   <p>-Tai Chi<p>
+                   <p>-Transcendental Meditation*<p>
+                   <p>-Yoga</p>
+                    
+                   </li>
+                   <li>
+                    
+                    <strong class="subtopic">Elements of Meditation</strong>
+                    
+                    <p>Different types of meditation may include different features to help you meditate. These may vary depending on whose guidance you follow or who's teaching a class. Some of the most common features in meditation include:</p>
+                    
+                    <p>- Focused attention</p>
+                    <p>- Relaxed breathing</p>
+                    <p>- A quiet setting</p>
+                    <p>- A comfortable position</p>
+
+                    </li>
+                    <li>
+                    
+                    <strong class="subtopic">Everyday Ways to Practice Meditation</strong>
+                    
+                    <p>Don't let the thought of meditating the "right" way add to your stress. Sure, you can attend special meditation 
+                        centers or group classes led by trained instructors. But you also can practice meditation easily on your own. 
+                        And you can make meditation as formal or informal as you like — whatever suits your lifestyle and situation. 
+                        Some people build meditation into their daily routine. For example, they may start and end each day with an 
+                        hour of meditation. But all you really need is a few minutes of quality time for meditation. 
+                        Here are some ways you can practice meditation on your own, whenever you choose</p>
+                        </li>
+                        <li>
+                    
+                    <h3>Breathe Deeply:</h3>
+                    <uL>
+                     <li>This technique is good for beginners because breathing is a natural function. Focus all 
+                        attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your 
+                        nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your 
+                        breathing</li>
+                </uL>
+
+                    <h3>Scan Your Body: </h3>
+                    <ul>
+                   <li> When using this technique, focus attention on different parts of your body. Become aware 
+                    of your body's various sensations, whether that's pain, tension, warmth or relaxation. Combine body 
+                    scanning with breathing exercises and imagine breathing heat or relaxation into and out of different parts of 
+                    your body</li>
+                </ul>
+
+                     <h3>Repeat a Mantra: </h3>
+                     <ul>
+                    <li>You can create your own mantra, whether it's religious or secular. Examples of religious 
+                        mantras include the Jesus Prayer in the Christian tradition, the holy name of God in Judaism, or the om 
+                        mantra of Hinduism, Buddhism and other Eastern religions</li>
+                </ul>
+
+                     <h3>Walk and Meditate: <h3>
+                    <ul>
+                     <li>Combining a walk with meditation is an efficient and healthy way to relax. You can use 
+                        this technique anywhere you're walking — in a tranquil forest, on a city sidewalk or at the mall. When you 
+                        use this method, slow down the pace of walking so that you can focus on each movement of your legs or 
+                        feet. Don't focus on a particular destination. Concentrate on your legs and feet, repeating action words in 
+                        your mind such as lifting, moving and placing as you lift each foot, move your leg forward and place your 
+                        foot on the ground</li>
+                </ul>
+
+                    <h3>Engage in Prayer: <h3>
+                        <ul>
+                    <li>Prayer is the best known and most widely practiced example of meditation. Spoken and 
+                        written prayers are found in most faith traditions. You can pray using your own words or read prayers 
+                        written by others. Check the self-help or 12-step-recovery section of your local bookstore for examples. Talk 
+                        with your rabbi, priest, pastor or other spiritual leader about resources</li>
+                </ul>
+
+                    <h3>Read and Reflect: <h3>
+                        <ul>
+                    <li>Many people report that they benefit from reading poems or sacred texts, and taking a
+                        few moments to quietly reflect on their meaning. You also can listen to sacred music, spoken words or any 
+                        music you find relaxing or inspiring. You may want to write your reflections in a journal or discuss them with 
+                        a friend or spiritual leader</li>
+                </ul>
+
+                    <h3>Focus Your Love and Gratitude:<h3>
+                        <ul>
+                    <li>In this type of meditation, you focus your attention on a sacred object or 
+                        being, weaving feelings of love and gratitude into your thoughts. You can also close your eyes and use your 
+                        imagination or gaze at representations of the object.</li>
+                </ul>
+
+                    <strong class="subtopic">Building Your Meditation Skills</strong>
+                       <p>Don't judge your meditation skills, which may only increase your stress. Meditation takes practice. Keep in mind, 
+                        for instance, that it's common for your mind to wander during meditation, no matter how long you've been 
+                        practicing meditation. If you're meditating to calm your mind and your attention wanders, slowly return to the 
+                        object, sensation or movement you're focusing on. 
+                        Experiment, and you'll likely find out what types of meditation work best for you and what you enjoy doing. 
+                        Adapt meditation to your needs at the moment. Remember, there's no right way or wrong way to meditate. 
+                        What matters is that meditation helps you with stress reduction and feeling better overall.</p> 
+                    </li>
+                </ul>
+                    
+                        
+                </div>
+                <div id="healthyDietContent" class="healthyDiet-content">
+
+                <h2>EATING FOR STRESS</h2>
+
+<p>Even in the best of times, you need food to survive and be healthy. Chronic stress (or stress overdrive) are certainly not the best of times, so the food choices you make become even more important to your health.</p>
+
+<p>Some diets, like ketogenic and paleo, are great in some instances but are not best for those experiencing chronic stress or stress overdrive. Here are some tips to eating for stress:</p>
+
+<ul>
+    <li>
+<strong class="subtopic">GOLDEN RATIO</strong> 
+
+<p>In each meal and snack include: protein (more vegetarian than animal); complex carbohydrates (whole grains), starchy vegetables (like carrots, sweet potatoes and legumes), and good quality fats (fresh olive, coconut, sesame, or flax oil)</p>
+
+</li>
+<li>
+
+    <strong class="subtopic">EAT YOUR VEGETABLES</strong> 
+
+<p>Every day, you should include 6-8 servings of a wide variety of vegetables in your meals, especially those that are naturally highly colored (bright green, red, orange, yellow or purple). Vegetables provide essential vitamins, minerals, antioxidants, and a high amount of fiber.</p>
+<li>
+</li>
+
+
+<strong class="subtopic" >AT REGULAR INTERVALS</strong>
+
+<p>Long periods without food and nourishment make your adrenals work harder, which means more cortisol released to help the body function. Having 3 nutritious meals, plus 2-3 snacks spread throughout the day, is a great way to help balance blood sugar and decrease the workload on your adrenals.</p>
+<li>
+</li>
+
+<strong class="subtopic">CAFFEINE</strong> 
+
+<p>Like what you eat, what you choose to drink will either support or put a strain on your adrenals. People with chronic stress should avoid caffeinated drinks like coffee, tea, soda, and energy drinks. The caffeine may provide a temporary boost, but it will leave you feeling worse soon after.</p>
+
+<li>
+</li>
+
+<strong class="subtopic">DON'T FORGET THE PROTEIN</strong>
+
+<p>Good quality protein from meat, fish, fowl, eggs, dairy and especially various plant sources (soy and other legumes, nuts and seeds) is essential for stress. Try to avoid processed proteins, such as packaged lunch meats and processed cheeses.</p>
+
+
+<li>
+</li>
+
+<strong class="subtopic">SUGAR AND WHITE FLOUR</strong> 
+
+<p>Ironically, foods made with these ingredients such as doughnuts, rolls, pies, cakes, cookies,crackers, and candy bars are the ones that many people suffering from chronic stress</p>
+
+<p>crave. Sugar and white flour are entirely naked calories, the metabolism of which drains an already depleted body of the vitamins and minerals it needs to heal or to maintain.</p>
+</li>
+            
+</ul>
+
+        
+                
+            </div>
+            </div>
+                
+                
+            </section>
+ 
+            <section class="home">
+                <div class="content">
+                    <h1 class="slide-left">Are You Feeling Stressed?</h1>
+                    <p class="slide-left">This Quiz Will Reveal How Stressed You Really Are.</p>
+                    <div class="links slide-left">
+                        <a href="#" class="btn">Start Quiz</a>
+                    </div>
+                    <div class="row" >
+                        <img src="images/0.png" alt="Image">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Disclaimer</h2>
+        <span class="info">• The scores on the following self-assessment do not reflect any particular diagnosis or course of treatment. </span>
+        <span class="info">• They are meant as a tool to help assess your level of stress. </span>
+        <span class="info">• If you have any further concerns about your current well-being,
+            you may contact and talk confidently to one of our mental health professionals. </span>
+       
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
+    </div>
+    
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
